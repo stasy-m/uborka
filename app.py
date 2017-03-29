@@ -42,7 +42,7 @@ def makeWebhookResult(req):
     floor = parameters.get("floor")
     office = parameters.get("office")
     if floor < 2**100:
-        floor = "на " + floor + " этаже"
+        floor = "на " + str(floor) + " этаже"
     elif floor == "нижнем":
         floor = "на " + floor + " этаже"
     elif floor == "верхнем":
