@@ -44,7 +44,7 @@ def makeWebhookResult(req):
 
     return {
         "floor": floor,
-        "source": "apiai-onlinestore-shipping"
+        "source": "apiai-uborka"
     }
 
 
