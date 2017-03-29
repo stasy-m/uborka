@@ -48,7 +48,7 @@ def makeWebhookResult(req):
     else:
         floor = "на " + floor + " этажах"
         
-    speech = "Hello! :-*"
+    speech = "Hello!"
 
     print("Response:")
     print(speech)
