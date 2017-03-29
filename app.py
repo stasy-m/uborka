@@ -34,19 +34,20 @@ def webhook():
 
 def makeWebhookResult(req):
     if req.get("result").get("action") != "get_task":
-        return {
-            "speech": "oh no",
-            "displayText": "oh no",
-        #"data": {},
-        # "contextOut": [],
-            "source": "uborka"
-        }
+        return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    #floor = parameters.get("floor")
-    #office = parameters.get("office")
-    
-
+    floor = parameters.get("floor")
+    office = parameters.get("office")
+    if floor < 2**100:
+        floor = "на " + floor + " этаже"
+    elif floor == "нижнем":
+        floor = "на " + floor + " этаже"
+    elif floor == "верхнем":
+        floor = "на " + floor + " этаже"
+    else:
+        floor = "на " + floor + " этажах"
+        
     speech = "Hello! :-*"
 
     print("Response:")
