@@ -32,21 +32,20 @@ def makeWebhookResult(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    floor = parameters.get("floor")
+    #floor = parameters.get("floor")
+    #office = parameters.get("office")
+    
 
-    if floor = 1:
-        floor = "на " + str(floor) + " этаже"
-    else:
-        floor = "на " + str(floor) + " этажах"
-        
-    speech = "такие дела"
-        
+    speech = "Hello! :-*"
+
     print("Response:")
     print(speech)
 
     return {
         "speech": speech,
         "displayText": speech,
+        #"data": {},
+        # "contextOut": [],
         "source": "uborka"
     }
 
