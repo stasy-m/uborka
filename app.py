@@ -28,7 +28,7 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "задание":
+    if req.get("result").get("action") != "get_task":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
