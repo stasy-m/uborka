@@ -34,7 +34,7 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     floor = parameters.get("floor")
 
-    if floor > 0:
+    if floor = 1:
         floor = "на " + str(floor) + " этаже"
     else:
         floor = "на " + str(floor) + " этажах"
