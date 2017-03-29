@@ -29,7 +29,13 @@ def webhook():
 
 def makeWebhookResult(req):
     if req.get("result").get("action") != "get_task":
-        return {}
+        return {
+            "speech": "oh no",
+            "displayText": "oh no",
+        #"data": {},
+        # "contextOut": [],
+            "source": "uborka"
+        }
     result = req.get("result")
     parameters = result.get("parameters")
     #floor = parameters.get("floor")
